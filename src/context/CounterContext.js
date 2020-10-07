@@ -8,7 +8,7 @@ export const CounterContextProvider = (props) => {
   // create state within here
   const [count, setCount] = useState(0);
 
-  // context returns a Provider
+  // context returns a Provider with the key value prop that contains state
   return (
     <CounterContext.Provider value={[count, setCount]}>
       {props.children}

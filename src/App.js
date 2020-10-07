@@ -6,8 +6,6 @@ import CounterView from './views/CounterView';
 // 3p UI Components
 import { Container } from 'semantic-ui-react';
 
-import './App.css';
-
 function App() {
   return (
     <Container>

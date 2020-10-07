@@ -10,6 +10,7 @@ import CounterButtons from '../components/CounterButtons';
 // 3p UI components
 import { Segment } from 'semantic-ui-react';
 
+// wrap the View component with the Context Provider
 function CounterView() {
   return (
     <CounterContextProvider>

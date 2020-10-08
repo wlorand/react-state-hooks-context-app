@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 
-// 3p components
+// 3p components - UI Design System
 import { Statistic } from 'semantic-ui-react';
 
-// context component
+// import context component
 import { CounterContext } from '../context/CounterContext';
 
+/**
+ * Display the Count -- that's all!
+ */
 function CounterDisplay() {
-  // consume state via the useContext hook
+  // consume state via the useContext hook - this is sharing state with sibling and child components
   const [count] = useContext(CounterContext);
 
   return (

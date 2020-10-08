@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Looks like a view here is a container component (like a dashboard?) that holds other UI components
+
 // import context provider
 import { CounterContextProvider } from '../context/CounterContext';
 

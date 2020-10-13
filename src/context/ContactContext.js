@@ -1,9 +1,9 @@
 import React, { useReducer, createContext } from 'react';
 
-// export a Context
-export const ContactsContext = createContext();
+// create a Context (and export it)
+export const ContactContext = createContext();
 
-// set initial state
+// set initial state -- with mock-data: still as always an {}
 const initialState = {
   contacts: [
     { id: '098', name: 'Diana Prince', email: 'diana@us.army.mil' },
@@ -15,18 +15,20 @@ const initialState = {
 };
 
 // Contacts Reducer
-const contactsReducer = (state, action) => {
-  // typical switch statement to handle diff cases
+const contactReducer = (state, action) => {
+  // typical switch statement to handle diff CRUD cases
   switch (action.type) {
     case 'ADD_CONTACT':
       return {
-        contacts: [...state.contacts, action.payload], // add a contact via array with spread existing
+        // ADD a contact via array with spread existing
+        contacts: [...state.contacts, action.payload],
       };
-    case 'DEL_CONTACT':
+    case 'DELETE_CONTACT':
+      // DELETE contact via filter
       return {
         contacts: state.contacts.filter(
           (contact) => contact.id !== action.payload
-        ), // DEL via filter
+        ),
       };
     case 'START':
       return {
@@ -37,6 +39,7 @@ const contactsReducer = (state, action) => {
         loading: false,
       };
     default:
+      // TODO: needs more fleshout - pass a msg to the error
       throw new Error();
   }
 };
@@ -44,7 +47,8 @@ const contactsReducer = (state, action) => {
 // export a Context Provider
 export const ContactContextProvider = (props) => {
   // create inital state and a dispatch method to update it via useReducer
-  const [state, dispatch] = useReducer(contactsReducer, initialState);
+  // notice useReducer takes in 1- a reducer; 2- the initialState - so this is where state=initialState
+  const [state, dispatch] = useReducer(contactReducer, initialState);
 
   // return a Context Provider
   return (

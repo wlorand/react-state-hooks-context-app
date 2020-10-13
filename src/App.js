@@ -2,9 +2,13 @@ import React from 'react';
 
 // View Components
 import CounterView from './views/CounterView';
+import ContactView from './views/ContactView';
 
 // 3p UI Components
 import { Container } from 'semantic-ui-react';
+
+// styles
+import './app.css';
 
 /**
  * App wrapped with UI Container from Design System
@@ -14,7 +18,8 @@ import { Container } from 'semantic-ui-react';
 function App() {
   return (
     <Container>
-      <h1>React Hooks Context Demo</h1>
+      <h1 className="app-title">React Context Hooks Demos</h1>
+      <ContactView />
       <CounterView />
     </Container>
   );

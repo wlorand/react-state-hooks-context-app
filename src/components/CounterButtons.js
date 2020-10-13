@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 // import context
 import { CounterContext } from '../context/CounterContext';
 
-// 3p components
+// 3p design system components
 import { Button } from 'semantic-ui-react';
 
 /**

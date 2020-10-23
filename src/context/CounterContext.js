@@ -1,11 +1,11 @@
 import React, { useState, createContext } from 'react';
 
-// 1- create Context Object - always the first step when
+// 1- create Context Object - always the first step when using Context
 export const CounterContext = createContext();
 
 // 2- create a Provider for components to consume and subscribe to changes
 export const CounterContextProvider = (props) => {
-  // create state within your Context here via useState
+  // create state, initial state and method to update state bit within your Context here via useState
   const [count, setCount] = useState(0);
 
   // context returns a Provider with the key value= prop that contains state value and method to update

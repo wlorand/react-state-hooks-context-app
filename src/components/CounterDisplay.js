@@ -7,7 +7,7 @@ import { Statistic } from 'semantic-ui-react';
 import { CounterContext } from '../context/CounterContext';
 
 /**
- * Display the Count -- that's all!
+ * Display the dynamic Count -- that's all!
  */
 function CounterDisplay() {
   // consume state via the useContext hook - this is sharing state with sibling and child components

@@ -1,9 +1,9 @@
 import React from 'react';
 
-// Looks like a view here is a container component 
+// Looks like a view here is a container component
 // (like a dashboard?) that holds other UI components
-// Also in View is a wrap of the CounterContextProvider, 
-// so each child component can call useContext()
+// Also in View is a wrap of the CounterContextProvider,
+// so each child component can call useContext() and get access to the state
 
 // import context provider
 import { CounterContextProvider } from '../context/CounterContext';
